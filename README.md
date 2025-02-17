@@ -87,8 +87,8 @@ kubectl apply -f https://github.com/weaveworks/weave/releases/latest/download/we
 
 On the master node, run:
 
-for NODE in 172.31.44.188 172.31.43.100; do
-  ssh ubuntu@$NODE "sudo kubeadm join 172.31.38.167:6443 --token <TOKEN> --discovery-token-ca-cert-hash sha256:<HASH>"
+for NODE in 172.31.44.188 (WN) 172.31.43.100 (WN); do
+  ssh ubuntu@$NODE "sudo kubeadm join 172.31.38.167:6443(MN) --token <TOKEN> --discovery-token-ca-cert-hash sha256:<HASH>"
 done
 Replace <TOKEN> and <HASH> with values from kubeadm token create --print-join-command.
 
