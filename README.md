@@ -42,6 +42,7 @@ To enable passwordless SSH access between nodes:
 Generate SSH Key on the Master Node
 
 ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa -N ""
+
 Copy the SSH Key to Worker Nodes
 
 ssh-copy-id ubuntu@172.31.44.188
